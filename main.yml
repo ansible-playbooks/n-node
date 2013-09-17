@@ -1,0 +1,18 @@
+#VERSION:
+
+---
+- hosts: all
+  vars:
+    node_version: stable
+    n_repo: https://github.com/visionmedia/n
+  tasks:
+  - name: ensure make is installed
+    apt: pkg=make state=latest
+  - name: ensure git is installed
+    apt: pkg=git-core state=latest
+  - name: download n
+    git: repo=${n_repo} dest=/tmp/n
+  - name: install n
+    command: make -C /tmp/n
+  - name: install node
+    command: n ${node_version}
