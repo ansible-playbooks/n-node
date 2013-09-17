@@ -1,7 +1,7 @@
 Ansible / n-node
 ================
 
-This is an ansible playbook to install [n]()(Node.js version manager) and the latest stable version of Node.js on your server(s).
+This is an ansible playbook to install [n](https://github.com/visionmedia/n)(Node.js version manager) and the latest stable version of Node.js on your server(s).
 
 
 Usage
